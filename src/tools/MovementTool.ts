@@ -51,7 +51,7 @@ export function MovementTool() {
             }
         ],
         shortcut: 'Shift+D',
-        onToolMove: async (_, event) => {
+        onToolMove: async () => {
             await renderCells();
         },
         onToolClick: async (_, event) => {
