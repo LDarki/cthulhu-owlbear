@@ -4,11 +4,11 @@
     "manifest_version": 1,
     "author": "LDarki",
     "description": "Cthulhu has a movement-system, piece zoom and a chat",
-    "icon": "/cthulhu.jpg",
+    "icon": "/cthulhu-owlbear/cthulhu.jpg",
     "action": {
         "title": "Cthulhu extension",
-        "icon": "/chat-icon.svg",
-        "popover": "/",
+        "icon": "/cthulhu-owlbear/chat-icon.svg",
+        "popover": "/cthulhu-owlbear/",
         "height": 600,
         "width": 400
     }
