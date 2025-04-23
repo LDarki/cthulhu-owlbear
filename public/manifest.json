@@ -1,0 +1,15 @@
+{
+    "name": "Cthulhu",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "author": "LDarki",
+    "description": "Cthulhu has a movement-system, piece zoom and a chat",
+    "icon": "/cthulhu.jpg",
+    "action": {
+        "title": "Cthulhu extension",
+        "icon": "/chat-icon.svg",
+        "popover": "/",
+        "height": 600,
+        "width": 400
+    }
+}
