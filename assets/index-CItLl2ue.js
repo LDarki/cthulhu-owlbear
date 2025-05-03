@@ -115,7 +115,7 @@
     `}async handleSubmit(n){if(n.preventDefault(),!this.inputValue.trim())return;const t=await L.player.getName(),e=await L.player.getRole()==="GM",i=await this.getUserAvatar(t),r={id:Date.now().toString(),text:this.inputValue,senderRole:e?"GM":"USER",sender:t,avatar:i,timestamp:new Date,isOwner:!0};r.text=Tr.sanitize(r.text),this.messages=[...this.messages,r],this.inputValue="";const s={...r,isOwner:!1};L.broadcast.sendMessage("cthulhu.message",s)}async getUserAvatar(n){return this.cacheAvatar||(this.cacheAvatar=yu(n)),this.cacheAvatar}};Dn([me({type:Array})],nn.prototype,"messages",2);Dn([me({type:String})],nn.prototype,"inputValue",2);Dn([me({type:String})],nn.prototype,"cacheAvatar",2);nn=Dn([Zr("chat-windows")],nn);var Uu=Object.defineProperty,Hu=Object.getOwnPropertyDescriptor,Li=(n,t,e,i)=>{for(var r=i>1?void 0:i?Hu(t,e):t,s=n.length-1,o;s>=0;s--)(o=n[s])&&(r=(i?o(t,e,r):o(r))||r);return i&&r&&Uu(t,e,r),r};let sn=class extends Xt{constructor(){super(...arguments),this.imageUrl=null,this.loaded=!1}connectedCallback(){super.connectedCallback();const t=new URLSearchParams(window.location.search).get("image");if(t){const e=decodeURIComponent(t),i=new Image;i.src=e,i.onload=()=>{this.imageUrl=e,this.loaded=!0},i.onerror=()=>{console.warn("No se pudo cargar la imagen:",e),this.loaded=!0}}}render(){return Dt`
       <div
         class="flex items-center justify-center w-full h-full fixed top-0 left-0 z-50 overflow-hidden bg-black bg-opacity-80"
-        @click=${()=>L.modal.close("ver-ficha")}
+        @click=${()=>{console.log("Modal clicked — closing modal"),L.modal.close("ver-ficha")}}
       >
         ${this.loaded&&this.imageUrl?Dt`
               <div
